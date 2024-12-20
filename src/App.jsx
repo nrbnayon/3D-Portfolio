@@ -1,9 +1,4 @@
-// import Hero from "./components/hero/Hero";
-// import Services from "./components/services/Services";
-// import Portfolio from "./components/portfolio/Portfolio";
-// import Contact from "./components/contact/Contact";
-
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import LazyLoad from "react-lazyload";
 
 const Hero = lazy(() => import("./components/hero/Hero"));
@@ -12,34 +7,37 @@ const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
 const Contact = lazy(() => import("./components/contact/Contact"));
 
 const App = () => {
+  useEffect(() => {
+    // Ensures scroll position is reset to top after all content is loaded
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="container">
+    <div className='container'>
       <Suspense fallback={"loading..."}>
         <LazyLoad height={"100vh"} offset={-100}>
-          <section id="#home">
+          <section id='#home'>
             <Hero />
           </section>
         </LazyLoad>
       </Suspense>
       <Suspense fallback={"loading..."}>
         <LazyLoad height={"100vh"} offset={-100}>
-          <section id="#services">
+          <section id='#services'>
             <Services />
-          </section>{" "}
+          </section>
         </LazyLoad>
       </Suspense>
       <Suspense fallback={"loading..."}>
         <LazyLoad height={"600vh"} offset={-100}>
-          {/* <section id="#portfolio"> */}
           <Portfolio />
-          {/* </section> */}{" "}
         </LazyLoad>
       </Suspense>
       <Suspense fallback={"loading..."}>
         <LazyLoad height={"100vh"} offset={-100}>
-          <section id="#contact">
+          <section id='#contact'>
             <Contact />
-          </section>{" "}
+          </section>
         </LazyLoad>
       </Suspense>
     </div>

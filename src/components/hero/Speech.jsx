@@ -12,9 +12,9 @@ const Speech = () => {
         <TypeAnimation
           sequence={[
             1000,
-            "Crafting seamless user experiences",
+            "Crafting seamless user experiences with modern web technologies",
             1000,
-            "With modern web technologies and a passion for clean, responsive design.",
+            "And a passion for clean, responsive design and animations.",
             1000,
           ]}
           wrapper='span'

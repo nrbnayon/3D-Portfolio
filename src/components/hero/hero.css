@@ -265,6 +265,26 @@
 }
 
 /* Add these new styles to your existing hero.css file while keeping all original styles */
+.award-social-link {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+}
+
+.award-social-link:hover {
+  background-color: pink;
+}
+
+.award-social-link svg {
+  color: #2f204e;
+}
 
 .resume-btn {
   display: flex;

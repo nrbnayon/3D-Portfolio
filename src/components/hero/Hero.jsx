@@ -76,9 +76,33 @@ const Hero = () => {
             satisfaction and drive business success.
           </motion.p>
           <motion.div variants={awardVariants} className='awardList'>
-            <motion.img variants={awardVariants} src='/award1.png' alt='' />
-            <motion.img variants={awardVariants} src='/award2.png' alt='' />
-            <motion.img variants={awardVariants} src='/award3.png' alt='' />
+            <motion.a
+              variants={awardVariants}
+              href='https://www.linkedin.com/in/itsnayon'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='award-social-link'
+            >
+              <FaLinkedin size={20} />
+            </motion.a>
+            <motion.a
+              variants={awardVariants}
+              href='https://github.com/nrbnayon'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='award-social-link'
+            >
+              <FaGithub size={20} />
+            </motion.a>
+            <motion.a
+              variants={awardVariants}
+              href='https://nrbnayon.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='award-social-link'
+            >
+              <BsFilePersonFill size={20} />
+            </motion.a>
             <motion.button
               variants={awardVariants}
               onClick={handleResumeDownload}
@@ -88,6 +112,44 @@ const Hero = () => {
               Download Resume
             </motion.button>
           </motion.div>
+          {/* <motion.div variants={awardVariants} className='awardList'>
+            <motion.img variants={awardVariants} src='/award1.png' alt='' />
+            <motion.img variants={awardVariants} src='/award2.png' alt='' />
+            <motion.img variants={awardVariants} src='/award3.png' alt='' />
+
+            <motion.img
+              variants={followVariants}
+              href='https://www.linkedin.com/in/itsnayon'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaLinkedin size={20} />
+            </motion.img>
+            <motion.img
+              variants={followVariants}
+              href='https://github.com/nrbnayon'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaGithub size={20} />
+            </motion.img>
+            <motion.img
+              variants={followVariants}
+              href='https://nrbnayon.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <BsFilePersonFill size={20} />
+            </motion.img>
+            <motion.button
+              variants={awardVariants}
+              onClick={handleResumeDownload}
+              className='resume-btn'
+            >
+              <HiDownload />
+              Download Resume
+            </motion.button>
+          </motion.div> */}
         </motion.div>
         {/* SCROLL SVG */}
         <motion.a
@@ -137,7 +199,7 @@ const Hero = () => {
         >
           <motion.a
             variants={followVariants}
-            href='YOUR_LINKEDIN_URL'
+            href='https://www.linkedin.com/in/itsnayon'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -145,7 +207,7 @@ const Hero = () => {
           </motion.a>
           <motion.a
             variants={followVariants}
-            href='YOUR_GITHUB_URL'
+            href='https://github.com/nrbnayon'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -153,7 +215,7 @@ const Hero = () => {
           </motion.a>
           <motion.a
             variants={followVariants}
-            href='YOUR_PORTFOLIO_URL'
+            href='https://nrbnayon.netlify.app/'
             target='_blank'
             rel='noopener noreferrer'
           >
