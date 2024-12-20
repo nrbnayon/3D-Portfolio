@@ -7,35 +7,35 @@ const items = [
     id: 1,
     img: "/p1.jpg",
     title: "Full Stack Blog Application",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "A comprehensive blog platform built with the MERN stack (MongoDB, Express.js, React, Node.js). Users can create, edit, delete, and comment on blog posts. The app includes authentication, user profiles, and real-time updates, providing an interactive and dynamic experience.",
     link: "/",
   },
   {
     id: 2,
     img: "/p2.jpg",
     title: "School Management System",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "A robust school management system designed to streamline administrative tasks, manage student records, and facilitate communication between students, teachers, and staff. Features include class scheduling, grade management, and attendance tracking.",
     link: "/",
   },
   {
     id: 3,
     img: "/p3.jpg",
     title: "Real-time Chat Application",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "A real-time chat application built with WebSockets, enabling instant messaging between users. The app supports one-on-one chats, group conversations, and notifications, providing a dynamic and interactive communication experience.",
     link: "/",
   },
   {
     id: 4,
     img: "/p4.jpg",
     title: "Social Media Project",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "A social media platform that allows users to create profiles, post updates, like, comment, and follow others. The app also features private messaging and a news feed, providing a comprehensive social experience.",
     link: "/",
   },
   {
     id: 5,
     img: "/p5.jpg",
     title: "Animated Portfolio Website",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "An interactive and visually engaging portfolio website showcasing personal projects and skills with smooth animations and transitions. Built with modern web technologies, it offers a unique way to present your work.",
     link: "/",
   },
 ];
@@ -81,18 +81,18 @@ const ListItem = ({ item }) => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="pItem" ref={ref}>
+    <div className='pItem' ref={ref}>
       <motion.div
         variants={imgVariants}
         animate={isInView ? "animate" : "initial"}
-        className="pImg"
+        className='pImg'
       >
-        <img src={item.img} alt="" />
+        <img src={item.img} alt='' />
       </motion.div>
       <motion.div
         variants={textVariants}
         animate={isInView ? "animate" : "initial"}
-        className="pText"
+        className='pText'
       >
         <motion.h1 variants={textVariants}>{item.title}</motion.h1>
         <motion.p variants={textVariants}>{item.desc}</motion.p>
@@ -142,10 +142,10 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="portfolio" ref={ref}>
-      <motion.div className="pList" style={{ x: xTranslate }}>
+    <div className='portfolio' ref={ref}>
+      <motion.div className='pList' style={{ x: xTranslate }}>
         <div
-          className="empty"
+          className='empty'
           style={{
             width: window.innerWidth - containerDistance,
             // backgroundColor: "pink",
@@ -160,25 +160,25 @@ const Portfolio = () => {
       <section />
       <section />
       <section />
-      <div className="pProgress">
-        <svg width="100%" height="100%" viewBox="0 0 160 160">
+      <div className='pProgress'>
+        <svg width='100%' height='100%' viewBox='0 0 160 160'>
           <circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#ddd"
+            cx='80'
+            cy='80'
+            r='70'
+            fill='none'
+            stroke='#ddd'
             strokeWidth={20}
           />
           <motion.circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#dd4c62"
+            cx='80'
+            cy='80'
+            r='70'
+            fill='none'
+            stroke='#dd4c62'
             strokeWidth={20}
             style={{ pathLength: scrollYProgress }}
-            transform="rotate(-90 80 80)"
+            transform='rotate(-90 80 80)'
           />
         </svg>
       </div>
